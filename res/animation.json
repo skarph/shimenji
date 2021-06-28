@@ -1,0 +1,221 @@
+{
+	"#SPRITE_SIZE":[ 40, 43 ],
+
+	"#DRAG":{
+		"animation": 15,
+		"rate": 10.0,
+	},
+	
+	"#RELEASE":{
+		"animation": 16,
+		"rate": 10.0,
+		"dy": "500",
+		"momentum": true,
+		"floor": "H-43",
+		"next": {"idleR":0.5, "idleL":0.5}
+	},
+	
+	"init": {
+		"animation": 0,
+		"time": 0.0,
+		"rate": 0.05,
+		"x": "0",
+		"y": "0",
+		"next": {"idleR": 0.5, "idleL": 0.5}
+	},
+	
+	"idleR": {
+		"animation": 0,
+		"time": 5.0,
+		"rate": 6.0,
+		"dx": "0",
+		"y": "H-43",
+		"next": {"idleR":0.1, "walkR":0.1, "upR":0.1, "crouchR":0.1, "idleL":0.1, "walkL":0.1, "upL":0.1, "crouchL":0.1, "jump":0.1, "waggle_windup":0.1}
+	},
+	
+	"walkR": {
+		"animation": 1,
+		"time": 1.0,
+		"rate": 0.1,
+		"dx": "100",
+		"y": "H-43",
+		"next": {"idleR":0.34, "runR":0.33, "walk_jumpR":0.33}
+	},
+	
+	"runR": {
+		"animation": 2,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "300",
+		"y": "H-43",
+		"next": {"walkR":0.75, "run_jumpR":0.25}
+	},
+	
+	"crouchR": {
+		"animation": 3,
+		"time": 0.25,
+		"rate": 0.125,
+		"dx": "0",
+		"y": "H-43",
+		"next": {"idleR": 0.2, "spinR": 0.8}
+	},
+	
+	"spinR": {
+		"animation": 4,
+		"time": 0.749,
+		"rate": 0.05,
+		"dx": "500",
+		"y": "H-43",
+		"next": {"runR":0.75, "spin_jumpR":0.25}
+	},
+	
+	"upR": {
+		"animation": 5,
+		"time": 0.999,
+		"rate": 0.5,
+		"dx": "0",
+		"y": "H-43",
+		"next": {"idleR":0.1, "walkR":0.1, "walk_jumpR":0.1, "crouchR":0.1, "idleL":0.1, "walkL":0.1, "walk_jumpL":0.1, "crouchL":0.1, "jump":0.1, "waggle_windup":0.1}
+	},
+	
+	"walk_jumpR": {
+		"animation": 14,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "100",
+		"y": "H-43 - 50*(0.5-2*((t-0.5)^2))",
+		"next": {"walkR": 0.75, "idleR": 0.25}
+	},
+	
+	"run_jumpR": {
+		"animation": 14,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "300",
+		"y": "H-43 - 50*(0.5-2*((t-0.5)^2))",
+		"next": {"runR": 0.75, "walkR": 0.25}
+	},
+	
+	"spin_jumpR": {
+		"animation": 14,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "500",
+		"y": "H-43 - 50*(0.5-2*((t-0.5)^2))",
+		"next": {"spinR": 0.5, "runR": 0.5}
+	},
+
+
+
+
+	"idleL": {
+		"animation": 6,
+		"time": 5.0,
+		"rate": 6.0,
+		"dx": "0",
+		"y": "H-43",
+		"next": {"idleR":0.1, "walkR":0.1, "upR":0.1, "crouchR":0.1, "idleL":0.1, "walkL":0.1, "upL":0.1, "crouchL":0.1, "jump":0.1, "waggle_windup":0.1}
+	},
+	
+	"walkL": {
+		"animation": 7,
+		"time": 1.0,
+		"rate": 0.1,
+		"dx": "-100",
+		"y": "H-43",
+		"next": {"idleL":0.34, "runL":0.33, "walk_jumpL":0.33}
+	},
+	
+	"runL": {
+		"animation": 8,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "-300",
+		"y": "H-43",
+		"next": {"walkL":0.75, "run_jumpL":0.25}
+	},
+	
+	"crouchL": {
+		"animation": 9,
+		"time": 0.25,
+		"rate": 0.125,
+		"dx": "0",
+		"y": "H-43",
+		"next": {"idleL": 0.2, "spinL": 0.8}
+	},
+	
+	"spinL": {
+		"animation": 10,
+		"time": 0.749,
+		"rate": 0.05,
+		"dx": "-500",
+		"y": "H-43",
+		"next": {"runL":0.75, "spin_jumpL":0.25}
+	},
+	
+	"upL": {
+		"animation": 11,
+		"time": 0.999,
+		"rate": 0.5,
+		"dx": "0",
+		"y": "H-43",
+		"next": {"idleR":0.1, "walkR":0.1, "walk_jumpR":0.1, "crouchR":0.1, "idleL":0.1, "walkL":0.1, "walk_jumpL":0.1, "crouchL":0.1, "jump":0.1, "waggle_windup":0.1}
+	},
+	
+	"walk_jumpL": {
+		"animation": 14,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "-100",
+		"y": "H-43 - 50*(0.5-2*((t-0.5)^2))",
+		"next": {"walkL": 0.75, "idleL": 0.25}
+	},
+	
+	"run_jumpL": {
+		"animation": 14,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "-300",
+		"y": "H-43 - 50*(0.5-2*((t-0.5)^2))",
+		"next": {"runL": 0.75, "walkL": 0.25}
+	},
+	
+	"spin_jumpL": {
+		"animation": 14,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "-500",
+		"y": "H-43 - 50*(0.5-2*((t-0.5)^2))",
+		"next": {"spinL": 0.5, "runL": 0.5}
+	},
+
+
+
+	
+	"waggle_windup": {
+		"animation": 12,
+		"time": 0.249,
+		"rate": 0.25,
+		"dx": "0",
+		"y": "H-43",
+		"next": {"waggle":1.0}
+	},
+	
+	"waggle": {
+		"animation": 13,
+		"time": 5.0,
+		"rate": 0.5,
+		"dx": "0",
+		"y": "H-43",
+		"next": {"idleR":0.15, "walkR":0.1, "upR":0.1, "crouchR":0.1, "idleL":0.1, "walkL":0.15, "upL":0.1, "crouchL":0.1, "jump":0.1}
+	},	
+	
+	"jump": {
+		"animation": 14,
+		"time": 1.0,
+		"rate": 0.05,
+		"dx": "0",
+		"y": "H-43 - 50*(0.5-2*((t-0.5)^2))",
+		"next": {"idleR":0.5, "idleL":0.5}
+	}
+}
